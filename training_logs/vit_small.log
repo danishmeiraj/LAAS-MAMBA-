@@ -1,0 +1,160 @@
+W1102 20:43:29.160000 3153 torch/distributed/run.py:851] 
+W1102 20:43:29.160000 3153 torch/distributed/run.py:851] *****************************************
+W1102 20:43:29.160000 3153 torch/distributed/run.py:851] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1102 20:43:29.160000 3153 torch/distributed/run.py:851] *****************************************
+[plantdoc] 2552 images, 27 mapped classes; unmatched folders: []
+[model] timm:vit_small_patch16_224 scan=ours params=21.64M
+/kaggle/working/laas_mamba.py:772: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  print(f'ep{ep} it{it}/{steps_ep} loss={float(loss):.3f} ' +
+ep0 it0/678 loss=3.786 ce=3.786 43 img/s
+ep0 it100/678 loss=2.696 ce=2.696 537 img/s
+ep0 it200/678 loss=2.341 ce=2.341 571 img/s
+ep0 it300/678 loss=1.739 ce=1.739 583 img/s
+ep0 it400/678 loss=1.496 ce=1.496 590 img/s
+ep0 it500/678 loss=1.799 ce=1.799 594 img/s
+ep0 it600/678 loss=1.647 ce=1.647 596 img/s
+[epoch] {'epoch': 0, 'val_acc': 0.6546961325966851, 'val_f1': 0.5314373067056097, 'time': 82.6704773902893, 'ce': 2.0800023261776364}
+ep1 it0/678 loss=1.782 ce=1.782 249 img/s
+ep1 it100/678 loss=1.790 ce=1.790 598 img/s
+ep1 it200/678 loss=1.977 ce=1.977 604 img/s
+ep1 it300/678 loss=1.893 ce=1.893 608 img/s
+ep1 it400/678 loss=1.844 ce=1.844 607 img/s
+ep1 it500/678 loss=1.618 ce=1.618 607 img/s
+ep1 it600/678 loss=1.854 ce=1.854 607 img/s
+[epoch] {'epoch': 1, 'val_acc': 0.634622467771639, 'val_f1': 0.4899317620075201, 'time': 79.84527015686035, 'ce': 1.7167327790837021}
+ep2 it0/678 loss=2.256 ce=2.256 263 img/s
+ep2 it100/678 loss=2.091 ce=2.091 602 img/s
+ep2 it200/678 loss=2.077 ce=2.077 609 img/s
+ep2 it300/678 loss=1.602 ce=1.602 609 img/s
+ep2 it400/678 loss=2.245 ce=2.245 605 img/s
+ep2 it500/678 loss=2.086 ce=2.086 607 img/s
+ep2 it600/678 loss=2.290 ce=2.290 607 img/s
+[epoch] {'epoch': 2, 'val_acc': 0.5609576427255986, 'val_f1': 0.39578050381658647, 'time': 80.15136313438416, 'ce': 2.0464450532356193}
+ep3 it0/678 loss=2.005 ce=2.005 209 img/s
+ep3 it100/678 loss=2.222 ce=2.222 593 img/s
+ep3 it200/678 loss=2.177 ce=2.177 600 img/s
+ep3 it300/678 loss=2.248 ce=2.248 600 img/s
+ep3 it400/678 loss=2.713 ce=2.713 600 img/s
+ep3 it500/678 loss=2.142 ce=2.142 603 img/s
+ep3 it600/678 loss=2.256 ce=2.256 602 img/s
+[epoch] {'epoch': 3, 'val_acc': 0.5441988950276243, 'val_f1': 0.4010942974912128, 'time': 80.42324137687683, 'ce': 2.189092315403761}
+ep4 it0/678 loss=1.911 ce=1.911 236 img/s
+ep4 it100/678 loss=1.991 ce=1.991 593 img/s
+ep4 it200/678 loss=1.733 ce=1.733 601 img/s
+ep4 it300/678 loss=2.172 ce=2.172 602 img/s
+ep4 it400/678 loss=2.090 ce=2.090 602 img/s
+ep4 it500/678 loss=1.970 ce=1.970 604 img/s
+ep4 it600/678 loss=2.492 ce=2.492 605 img/s
+[epoch] {'epoch': 4, 'val_acc': 0.5548802946593002, 'val_f1': 0.41290077014453225, 'time': 80.24772620201111, 'ce': 2.193774558098267}
+ep5 it0/678 loss=2.468 ce=2.468 261 img/s
+ep5 it100/678 loss=2.531 ce=2.531 604 img/s
+ep5 it200/678 loss=2.221 ce=2.221 604 img/s
+ep5 it300/678 loss=2.448 ce=2.448 606 img/s
+ep5 it400/678 loss=2.157 ce=2.157 606 img/s
+ep5 it500/678 loss=1.968 ce=1.968 607 img/s
+ep5 it600/678 loss=2.005 ce=2.005 607 img/s
+[epoch] {'epoch': 5, 'val_acc': 0.6057090239410682, 'val_f1': 0.45994930514429677, 'time': 79.75623178482056, 'ce': 2.072830605295907}
+ep6 it0/678 loss=2.024 ce=2.024 235 img/s
+ep6 it100/678 loss=1.622 ce=1.622 586 img/s
+ep6 it200/678 loss=1.941 ce=1.941 593 img/s
+ep6 it300/678 loss=2.223 ce=2.223 598 img/s
+ep6 it400/678 loss=2.015 ce=2.015 602 img/s
+ep6 it500/678 loss=1.794 ce=1.794 603 img/s
+ep6 it600/678 loss=1.952 ce=1.952 604 img/s
+[epoch] {'epoch': 6, 'val_acc': 0.6589318600368325, 'val_f1': 0.5340703657468839, 'time': 80.34952306747437, 'ce': 1.8668040047704646}
+ep7 it0/678 loss=1.604 ce=1.604 240 img/s
+ep7 it100/678 loss=2.530 ce=2.530 593 img/s
+ep7 it200/678 loss=1.759 ce=1.759 602 img/s
+ep7 it300/678 loss=2.000 ce=2.000 602 img/s
+ep7 it400/678 loss=1.953 ce=1.953 606 img/s
+ep7 it500/678 loss=1.912 ce=1.912 605 img/s
+ep7 it600/678 loss=1.774 ce=1.774 604 img/s
+[epoch] {'epoch': 7, 'val_acc': 0.6882136279926335, 'val_f1': 0.5954198007812126, 'time': 80.41271638870239, 'ce': 1.753615657840155}
+ep8 it0/678 loss=1.669 ce=1.669 239 img/s
+ep8 it100/678 loss=1.467 ce=1.467 599 img/s
+ep8 it200/678 loss=1.784 ce=1.784 603 img/s
+ep8 it300/678 loss=1.768 ce=1.768 606 img/s
+ep8 it400/678 loss=1.447 ce=1.447 608 img/s
+ep8 it500/678 loss=1.291 ce=1.291 607 img/s
+ep8 it600/678 loss=1.669 ce=1.669 608 img/s
+[epoch] {'epoch': 8, 'val_acc': 0.7300184162062615, 'val_f1': 0.6266568446592921, 'time': 80.07794523239136, 'ce': 1.5836855007835546}
+ep9 it0/678 loss=1.467 ce=1.467 256 img/s
+ep9 it100/678 loss=1.397 ce=1.397 591 img/s
+ep9 it200/678 loss=1.277 ce=1.277 598 img/s
+ep9 it300/678 loss=1.413 ce=1.413 603 img/s
+ep9 it400/678 loss=1.384 ce=1.384 605 img/s
+ep9 it500/678 loss=1.589 ce=1.589 607 img/s
+ep9 it600/678 loss=1.378 ce=1.378 608 img/s
+[epoch] {'epoch': 9, 'val_acc': 0.7725598526703499, 'val_f1': 0.6777875303537351, 'time': 79.92394852638245, 'ce': 1.4936265973566556}
+ep10 it0/678 loss=1.506 ce=1.506 248 img/s
+ep10 it100/678 loss=1.209 ce=1.209 599 img/s
+ep10 it200/678 loss=1.257 ce=1.257 602 img/s
+ep10 it300/678 loss=1.501 ce=1.501 604 img/s
+ep10 it400/678 loss=1.322 ce=1.322 607 img/s
+ep10 it500/678 loss=1.209 ce=1.209 608 img/s
+ep10 it600/678 loss=1.373 ce=1.373 609 img/s
+[epoch] {'epoch': 10, 'val_acc': 0.8200736648250461, 'val_f1': 0.7588793730395543, 'time': 79.63138818740845, 'ce': 1.3644981721861174}
+ep11 it0/678 loss=1.387 ce=1.387 264 img/s
+ep11 it100/678 loss=1.304 ce=1.304 597 img/s
+ep11 it200/678 loss=1.164 ce=1.164 608 img/s
+ep11 it300/678 loss=1.239 ce=1.239 611 img/s
+ep11 it400/678 loss=1.376 ce=1.376 612 img/s
+ep11 it500/678 loss=1.205 ce=1.205 614 img/s
+ep11 it600/678 loss=1.133 ce=1.133 615 img/s
+[epoch] {'epoch': 11, 'val_acc': 0.8384898710865561, 'val_f1': 0.7736664720582189, 'time': 79.24442601203918, 'ce': 1.2796981046333427}
+ep12 it0/678 loss=1.224 ce=1.224 247 img/s
+ep12 it100/678 loss=1.265 ce=1.265 596 img/s
+ep12 it200/678 loss=1.054 ce=1.054 603 img/s
+ep12 it300/678 loss=1.089 ce=1.089 610 img/s
+ep12 it400/678 loss=1.137 ce=1.137 612 img/s
+ep12 it500/678 loss=1.450 ce=1.450 612 img/s
+ep12 it600/678 loss=1.155 ce=1.155 613 img/s
+[epoch] {'epoch': 12, 'val_acc': 0.8613259668508287, 'val_f1': 0.8055950191885339, 'time': 79.2555890083313, 'ce': 1.2145892568042496}
+ep13 it0/678 loss=1.092 ce=1.092 224 img/s
+ep13 it100/678 loss=1.132 ce=1.132 599 img/s
+ep13 it200/678 loss=1.245 ce=1.245 607 img/s
+ep13 it300/678 loss=1.175 ce=1.175 610 img/s
+ep13 it400/678 loss=1.294 ce=1.294 610 img/s
+ep13 it500/678 loss=1.352 ce=1.352 611 img/s
+ep13 it600/678 loss=1.157 ce=1.157 610 img/s
+[epoch] {'epoch': 13, 'val_acc': 0.8646408839779005, 'val_f1': 0.807466171256754, 'time': 79.73052310943604, 'ce': 1.1830681994952987}
+ep14 it0/678 loss=1.348 ce=1.348 228 img/s
+ep14 it100/678 loss=1.243 ce=1.243 593 img/s
+ep14 it200/678 loss=1.218 ce=1.218 602 img/s
+ep14 it300/678 loss=1.227 ce=1.227 606 img/s
+ep14 it400/678 loss=1.266 ce=1.266 610 img/s
+ep14 it500/678 loss=1.199 ce=1.199 612 img/s
+ep14 it600/678 loss=1.115 ce=1.115 612 img/s
+[epoch] {'epoch': 14, 'val_acc': 0.867219152854512, 'val_f1': 0.8114848157156358, 'time': 79.26435232162476, 'ce': 1.1713984216560656}
+{
+  "arch": "timm:vit_small_patch16_224",
+  "scan": "ours",
+  "bit": false,
+  "name": "vit_small",
+  "params_M": 21.64343,
+  "pv_test": {
+    "acc": 0.8657211272794253,
+    "f1": 0.8136260884757958
+  },
+  "pv_test_bgswap": {
+    "acc": 0.09007183643396574,
+    "f1": 0.04787672027794558
+  },
+  "bg_reliance_drop": 0.7756492908454595,
+  "plantdoc_zeroshot": {
+    "acc": 0.08581504702194358,
+    "f1": 0.058872784463791177
+  },
+  "robust": {
+    "noise0": 0.85190642843986,
+    "noise1": 0.8169091913796279,
+    "blur0": 0.8706944188616688,
+    "blur1": 0.8625897955424572,
+    "dark0": 0.6772886351077546,
+    "dark1": 0.244428071468042,
+    "bright0": 0.7461779333210536,
+    "bright1": 0.46859458463805487
+  },
+  "throughput_img_s": 2305.4176686408423
+}

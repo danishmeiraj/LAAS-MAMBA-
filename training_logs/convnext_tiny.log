@@ -1,0 +1,168 @@
+W1102 20:18:03.270000 2843 torch/distributed/run.py:851] 
+W1102 20:18:03.270000 2843 torch/distributed/run.py:851] *****************************************
+W1102 20:18:03.270000 2843 torch/distributed/run.py:851] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1102 20:18:03.270000 2843 torch/distributed/run.py:851] *****************************************
+[plantdoc] 2552 images, 27 mapped classes; unmatched folders: []
+[model] timm:convnext_tiny scan=ours params=27.85M
+/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py:869: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [768, 1, 7, 7], strides() = [49, 1, 7, 1]
+bucket_view.sizes() = [768, 1, 7, 7], strides() = [49, 49, 7, 1] (Triggered internally at /pytorch/torch/csrc/distributed/c10d/reducer.cpp:332.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py:869: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [768, 1, 7, 7], strides() = [49, 1, 7, 1]
+bucket_view.sizes() = [768, 1, 7, 7], strides() = [49, 49, 7, 1] (Triggered internally at /pytorch/torch/csrc/distributed/c10d/reducer.cpp:332.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/kaggle/working/laas_mamba.py:772: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  print(f'ep{ep} it{it}/{steps_ep} loss={float(loss):.3f} ' +
+ep0 it0/678 loss=3.835 ce=3.835 3 img/s
+ep0 it100/678 loss=3.099 ce=3.099 186 img/s
+ep0 it200/678 loss=2.891 ce=2.891 276 img/s
+ep0 it300/678 loss=2.420 ce=2.420 329 img/s
+ep0 it400/678 loss=2.470 ce=2.470 364 img/s
+ep0 it500/678 loss=2.213 ce=2.213 390 img/s
+ep0 it600/678 loss=2.307 ce=2.307 409 img/s
+[epoch] {'epoch': 0, 'val_acc': 0.501841620626151, 'val_f1': 0.3317006438432564, 'time': 128.33748769760132, 'ce': 2.6188914431231565}
+ep1 it0/678 loss=1.981 ce=1.981 213 img/s
+ep1 it100/678 loss=1.799 ce=1.799 528 img/s
+ep1 it200/678 loss=2.206 ce=2.206 534 img/s
+ep1 it300/678 loss=1.936 ce=1.936 535 img/s
+ep1 it400/678 loss=2.079 ce=2.079 535 img/s
+ep1 it500/678 loss=1.489 ce=1.489 536 img/s
+ep1 it600/678 loss=1.429 ce=1.429 537 img/s
+[epoch] {'epoch': 1, 'val_acc': 0.6572744014732965, 'val_f1': 0.5111766426482014, 'time': 89.75049638748169, 'ce': 1.7972361696856562}
+ep2 it0/678 loss=1.774 ce=1.774 226 img/s
+ep2 it100/678 loss=1.602 ce=1.602 528 img/s
+ep2 it200/678 loss=1.466 ce=1.466 536 img/s
+ep2 it300/678 loss=1.377 ce=1.377 536 img/s
+ep2 it400/678 loss=1.550 ce=1.550 536 img/s
+ep2 it500/678 loss=1.277 ce=1.277 537 img/s
+ep2 it600/678 loss=1.378 ce=1.378 538 img/s
+[epoch] {'epoch': 2, 'val_acc': 0.8270718232044199, 'val_f1': 0.7462913788447312, 'time': 89.44214725494385, 'ce': 1.4406628453977692}
+ep3 it0/678 loss=1.323 ce=1.323 240 img/s
+ep3 it100/678 loss=1.378 ce=1.378 525 img/s
+ep3 it200/678 loss=1.175 ce=1.175 533 img/s
+ep3 it300/678 loss=1.307 ce=1.307 538 img/s
+ep3 it400/678 loss=1.164 ce=1.164 538 img/s
+ep3 it500/678 loss=1.087 ce=1.087 539 img/s
+ep3 it600/678 loss=1.133 ce=1.133 541 img/s
+[epoch] {'epoch': 3, 'val_acc': 0.8810313075506445, 'val_f1': 0.8276561911285721, 'time': 89.17132496833801, 'ce': 1.2103630673568861}
+ep4 it0/678 loss=1.117 ce=1.117 232 img/s
+ep4 it100/678 loss=1.247 ce=1.247 533 img/s
+ep4 it200/678 loss=1.019 ce=1.019 540 img/s
+ep4 it300/678 loss=1.184 ce=1.184 540 img/s
+ep4 it400/678 loss=1.145 ce=1.145 541 img/s
+ep4 it500/678 loss=1.069 ce=1.069 540 img/s
+ep4 it600/678 loss=0.927 ce=0.927 540 img/s
+[epoch] {'epoch': 4, 'val_acc': 0.9064456721915285, 'val_f1': 0.8655987908411481, 'time': 89.39470934867859, 'ce': 1.0823221122269082}
+ep5 it0/678 loss=0.974 ce=0.974 224 img/s
+ep5 it100/678 loss=0.951 ce=0.951 522 img/s
+ep5 it200/678 loss=0.904 ce=0.904 531 img/s
+ep5 it300/678 loss=1.248 ce=1.248 535 img/s
+ep5 it400/678 loss=0.964 ce=0.964 538 img/s
+ep5 it500/678 loss=0.916 ce=0.916 539 img/s
+ep5 it600/678 loss=1.092 ce=1.092 539 img/s
+[epoch] {'epoch': 5, 'val_acc': 0.9110497237569061, 'val_f1': 0.8670883285217075, 'time': 89.1351900100708, 'ce': 0.9838382867233592}
+ep6 it0/678 loss=1.009 ce=1.009 231 img/s
+ep6 it100/678 loss=0.822 ce=0.822 529 img/s
+ep6 it200/678 loss=1.021 ce=1.021 534 img/s
+ep6 it300/678 loss=1.010 ce=1.010 534 img/s
+ep6 it400/678 loss=1.047 ce=1.047 535 img/s
+ep6 it500/678 loss=0.835 ce=0.835 535 img/s
+ep6 it600/678 loss=0.887 ce=0.887 534 img/s
+[epoch] {'epoch': 6, 'val_acc': 0.943646408839779, 'val_f1': 0.9147156264640462, 'time': 90.29702258110046, 'ce': 0.9232777283254978}
+ep7 it0/678 loss=0.759 ce=0.759 242 img/s
+ep7 it100/678 loss=1.011 ce=1.011 523 img/s
+ep7 it200/678 loss=0.817 ce=0.817 525 img/s
+ep7 it300/678 loss=1.092 ce=1.092 529 img/s
+ep7 it400/678 loss=0.934 ce=0.934 531 img/s
+ep7 it500/678 loss=0.938 ce=0.938 530 img/s
+ep7 it600/678 loss=0.762 ce=0.762 531 img/s
+[epoch] {'epoch': 7, 'val_acc': 0.9515653775322284, 'val_f1': 0.9338206079977669, 'time': 90.52203822135925, 'ce': 0.8695685912725848}
+ep8 it0/678 loss=0.849 ce=0.849 197 img/s
+ep8 it100/678 loss=0.791 ce=0.791 517 img/s
+ep8 it200/678 loss=0.834 ce=0.834 528 img/s
+ep8 it300/678 loss=0.951 ce=0.951 531 img/s
+ep8 it400/678 loss=0.982 ce=0.982 532 img/s
+ep8 it500/678 loss=0.724 ce=0.724 533 img/s
+ep8 it600/678 loss=0.955 ce=0.955 536 img/s
+[epoch] {'epoch': 8, 'val_acc': 0.9685082872928177, 'val_f1': 0.9581993070002114, 'time': 89.77701473236084, 'ce': 0.8301805704392514}
+ep9 it0/678 loss=0.751 ce=0.751 204 img/s
+ep9 it100/678 loss=0.753 ce=0.753 529 img/s
+ep9 it200/678 loss=0.710 ce=0.710 537 img/s
+ep9 it300/678 loss=0.708 ce=0.708 539 img/s
+ep9 it400/678 loss=0.952 ce=0.952 541 img/s
+ep9 it500/678 loss=0.706 ce=0.706 541 img/s
+ep9 it600/678 loss=0.720 ce=0.720 541 img/s
+[epoch] {'epoch': 9, 'val_acc': 0.9753222836095764, 'val_f1': 0.9668341435182962, 'time': 89.01165652275085, 'ce': 0.7968793210730089}
+ep10 it0/678 loss=0.737 ce=0.737 221 img/s
+ep10 it100/678 loss=0.768 ce=0.768 532 img/s
+ep10 it200/678 loss=0.822 ce=0.822 540 img/s
+ep10 it300/678 loss=0.764 ce=0.764 544 img/s
+ep10 it400/678 loss=0.785 ce=0.785 542 img/s
+ep10 it500/678 loss=0.843 ce=0.843 544 img/s
+ep10 it600/678 loss=0.826 ce=0.826 544 img/s
+[epoch] {'epoch': 10, 'val_acc': 0.9777163904235727, 'val_f1': 0.969954077653156, 'time': 88.56101965904236, 'ce': 0.7638661432406896}
+ep11 it0/678 loss=0.753 ce=0.753 200 img/s
+ep11 it100/678 loss=0.767 ce=0.767 528 img/s
+ep11 it200/678 loss=0.717 ce=0.717 533 img/s
+ep11 it300/678 loss=0.822 ce=0.822 537 img/s
+ep11 it400/678 loss=0.742 ce=0.742 539 img/s
+ep11 it500/678 loss=0.694 ce=0.694 539 img/s
+ep11 it600/678 loss=0.702 ce=0.702 539 img/s
+[epoch] {'epoch': 11, 'val_acc': 0.9825046040515654, 'val_f1': 0.9768115698520891, 'time': 89.06770753860474, 'ce': 0.7441534981966722}
+ep12 it0/678 loss=0.679 ce=0.679 206 img/s
+ep12 it100/678 loss=0.746 ce=0.746 529 img/s
+ep12 it200/678 loss=0.697 ce=0.697 538 img/s
+ep12 it300/678 loss=0.771 ce=0.771 541 img/s
+ep12 it400/678 loss=0.716 ce=0.716 543 img/s
+ep12 it500/678 loss=0.717 ce=0.717 544 img/s
+ep12 it600/678 loss=0.739 ce=0.739 544 img/s
+[epoch] {'epoch': 12, 'val_acc': 0.9858195211786372, 'val_f1': 0.9798190286210087, 'time': 88.59047555923462, 'ce': 0.7290975745097023}
+ep13 it0/678 loss=0.700 ce=0.700 231 img/s
+ep13 it100/678 loss=0.694 ce=0.694 525 img/s
+ep13 it200/678 loss=0.800 ce=0.800 534 img/s
+ep13 it300/678 loss=0.694 ce=0.694 535 img/s
+ep13 it400/678 loss=0.700 ce=0.700 538 img/s
+ep13 it500/678 loss=0.722 ce=0.722 540 img/s
+ep13 it600/678 loss=0.797 ce=0.797 540 img/s
+[epoch] {'epoch': 13, 'val_acc': 0.9880294659300184, 'val_f1': 0.9833553245981989, 'time': 89.40574359893799, 'ce': 0.7211218639812639}
+ep14 it0/678 loss=0.684 ce=0.684 234 img/s
+ep14 it100/678 loss=0.732 ce=0.732 526 img/s
+ep14 it200/678 loss=0.731 ce=0.731 535 img/s
+ep14 it300/678 loss=0.744 ce=0.744 539 img/s
+ep14 it400/678 loss=0.701 ce=0.701 538 img/s
+ep14 it500/678 loss=0.699 ce=0.699 540 img/s
+ep14 it600/678 loss=0.689 ce=0.689 541 img/s
+[epoch] {'epoch': 14, 'val_acc': 0.9882136279926336, 'val_f1': 0.9837798280846478, 'time': 89.32150864601135, 'ce': 0.7148456404694413}
+{
+  "arch": "timm:convnext_tiny",
+  "scan": "ours",
+  "bit": false,
+  "name": "convnext_tiny",
+  "params_M": 27.84935,
+  "pv_test": {
+    "acc": 0.9834223613925216,
+    "f1": 0.9795549998336761
+  },
+  "pv_test_bgswap": {
+    "acc": 0.10849143488671947,
+    "f1": 0.09157409013580484
+  },
+  "bg_reliance_drop": 0.8749309265058021,
+  "plantdoc_zeroshot": {
+    "acc": 0.09678683385579938,
+    "f1": 0.06951590741506883
+  },
+  "robust": {
+    "noise0": 0.9799226376864985,
+    "noise1": 0.9605820593111071,
+    "blur0": 0.9832381654079941,
+    "blur1": 0.9764229139804752,
+    "dark0": 0.9732915822435071,
+    "dark1": 0.7478356971818014,
+    "bright0": 0.9622398231718549,
+    "bright1": 0.7876220298397495
+  },
+  "throughput_img_s": 1256.0213339455602
+}

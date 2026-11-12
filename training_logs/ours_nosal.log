@@ -1,0 +1,168 @@
+W1102 18:32:33.388000 1913 torch/distributed/run.py:851] 
+W1102 18:32:33.388000 1913 torch/distributed/run.py:851] *****************************************
+W1102 18:32:33.388000 1913 torch/distributed/run.py:851] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1102 18:32:33.388000 1913 torch/distributed/run.py:851] *****************************************
+[plantdoc] 2552 images, 27 mapped classes; unmatched folders: []
+[model] mamba scan=ours params=1.55M
+/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py:869: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1, 3, 3], strides() = [9, 1, 3, 1]
+bucket_view.sizes() = [256, 1, 3, 3], strides() = [9, 9, 3, 1] (Triggered internally at /pytorch/torch/csrc/distributed/c10d/reducer.cpp:332.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py:869: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [256, 1, 3, 3], strides() = [9, 1, 3, 1]
+bucket_view.sizes() = [256, 1, 3, 3], strides() = [9, 9, 3, 1] (Triggered internally at /pytorch/torch/csrc/distributed/c10d/reducer.cpp:332.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/kaggle/working/laas_mamba.py:772: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  print(f'ep{ep} it{it}/{steps_ep} loss={float(loss):.3f} ' +
+ep0 it0/678 loss=3.900 ce=3.608 kl=0.007 feat=0.570 9 img/s
+ep0 it100/678 loss=3.471 ce=3.436 kl=0.008 feat=0.054 189 img/s
+ep0 it200/678 loss=3.116 ce=3.055 kl=0.025 feat=0.072 211 img/s
+ep0 it300/678 loss=2.891 ce=2.820 kl=0.031 feat=0.080 221 img/s
+ep0 it400/678 loss=2.826 ce=2.731 kl=0.050 feat=0.091 226 img/s
+ep0 it500/678 loss=2.755 ce=2.551 kl=0.138 feat=0.132 229 img/s
+ep0 it600/678 loss=2.682 ce=2.551 kl=0.082 feat=0.097 231 img/s
+[epoch] {'epoch': 0, 'val_acc': 0.4880294659300184, 'val_f1': 0.2564275001835991, 'time': 199.2450716495514, 'ce': 2.98335540681462, 'kl': 0.061401237780365624, 'feat': 0.12014695114090732}
+ep1 it0/678 loss=2.418 ce=2.267 kl=0.107 feat=0.090 143 img/s
+ep1 it100/678 loss=2.343 ce=2.162 kl=0.137 feat=0.087 238 img/s
+ep1 it200/678 loss=2.340 ce=2.137 kl=0.155 feat=0.098 240 img/s
+ep1 it300/678 loss=2.704 ce=2.442 kl=0.208 feat=0.107 241 img/s
+ep1 it400/678 loss=2.501 ce=2.303 kl=0.161 feat=0.075 241 img/s
+ep1 it500/678 loss=2.145 ce=1.881 kl=0.223 feat=0.081 242 img/s
+ep1 it600/678 loss=2.199 ce=1.901 kl=0.255 feat=0.085 241 img/s
+[epoch] {'epoch': 1, 'val_acc': 0.7086556169429098, 'val_f1': 0.5277474850649122, 'time': 189.8296253681183, 'ce': 2.1282870762467736, 'kl': 0.2089263105814436, 'feat': 0.09976622769966238}
+ep2 it0/678 loss=2.201 ce=1.986 kl=0.184 feat=0.062 138 img/s
+ep2 it100/678 loss=2.073 ce=1.814 kl=0.228 feat=0.062 239 img/s
+ep2 it200/678 loss=2.112 ce=1.840 kl=0.240 feat=0.064 240 img/s
+ep2 it300/678 loss=1.888 ce=1.516 kl=0.337 feat=0.071 241 img/s
+ep2 it400/678 loss=2.227 ce=1.869 kl=0.327 feat=0.062 241 img/s
+ep2 it500/678 loss=1.425 ce=1.277 kl=0.135 feat=0.026 241 img/s
+ep2 it600/678 loss=1.922 ce=1.656 kl=0.248 feat=0.037 241 img/s
+[epoch] {'epoch': 2, 'val_acc': 0.8316758747697974, 'val_f1': 0.7307539540170375, 'time': 189.98238897323608, 'ce': 1.695390459358868, 'kl': 0.26157748242043466, 'feat': 0.05372354062960914}
+ep3 it0/678 loss=1.761 ce=1.426 kl=0.312 feat=0.045 140 img/s
+ep3 it100/678 loss=2.111 ce=1.749 kl=0.342 feat=0.040 238 img/s
+ep3 it200/678 loss=1.665 ce=1.380 kl=0.269 feat=0.032 239 img/s
+ep3 it300/678 loss=1.772 ce=1.491 kl=0.268 feat=0.027 240 img/s
+ep3 it400/678 loss=2.014 ce=1.771 kl=0.231 feat=0.024 240 img/s
+ep3 it500/678 loss=1.470 ce=1.236 kl=0.220 feat=0.027 240 img/s
+ep3 it600/678 loss=1.461 ce=1.270 kl=0.177 feat=0.027 240 img/s
+[epoch] {'epoch': 3, 'val_acc': 0.8675874769797421, 'val_f1': 0.795197661937545, 'time': 191.00361371040344, 'ce': 1.4525307624389288, 'kl': 0.2727977561388044, 'feat': 0.031960557695686995}
+ep4 it0/678 loss=1.839 ce=1.539 kl=0.282 feat=0.035 132 img/s
+ep4 it100/678 loss=1.847 ce=1.420 kl=0.413 feat=0.029 239 img/s
+ep4 it200/678 loss=1.389 ce=1.167 kl=0.211 feat=0.022 239 img/s
+ep4 it300/678 loss=1.735 ce=1.470 kl=0.252 feat=0.024 239 img/s
+ep4 it400/678 loss=1.445 ce=1.229 kl=0.209 feat=0.016 240 img/s
+ep4 it500/678 loss=1.280 ce=1.069 kl=0.201 feat=0.019 240 img/s
+ep4 it600/678 loss=1.409 ce=1.197 kl=0.204 feat=0.015 240 img/s
+[epoch] {'epoch': 4, 'val_acc': 0.8957642725598527, 'val_f1': 0.8414595188638005, 'time': 190.62817573547363, 'ce': 1.3143065686071165, 'kl': 0.2634871266232831, 'feat': 0.022947920458858344}
+ep5 it0/678 loss=1.630 ce=1.295 kl=0.323 feat=0.024 138 img/s
+ep5 it100/678 loss=1.314 ce=1.132 kl=0.173 feat=0.016 239 img/s
+ep5 it200/678 loss=1.636 ce=1.290 kl=0.335 feat=0.022 237 img/s
+ep5 it300/678 loss=1.776 ce=1.450 kl=0.317 feat=0.018 239 img/s
+ep5 it400/678 loss=1.395 ce=1.227 kl=0.161 feat=0.014 240 img/s
+ep5 it500/678 loss=1.512 ce=1.207 kl=0.295 feat=0.019 240 img/s
+ep5 it600/678 loss=1.314 ce=1.131 kl=0.174 feat=0.015 240 img/s
+[epoch] {'epoch': 5, 'val_acc': 0.9092081031307551, 'val_f1': 0.8595927598043179, 'time': 190.64397954940796, 'ce': 1.2050073674294801, 'kl': 0.2515519403778346, 'feat': 0.01853799819946289}
+ep6 it0/678 loss=1.415 ce=1.143 kl=0.265 feat=0.015 123 img/s
+ep6 it100/678 loss=1.167 ce=0.978 kl=0.182 feat=0.013 238 img/s
+ep6 it200/678 loss=1.393 ce=1.182 kl=0.203 feat=0.016 240 img/s
+ep6 it300/678 loss=1.531 ce=1.303 kl=0.220 feat=0.015 240 img/s
+ep6 it400/678 loss=1.492 ce=1.270 kl=0.214 feat=0.015 240 img/s
+ep6 it500/678 loss=1.350 ce=1.078 kl=0.265 feat=0.016 241 img/s
+ep6 it600/678 loss=1.473 ce=1.146 kl=0.318 feat=0.018 241 img/s
+[epoch] {'epoch': 6, 'val_acc': 0.9265193370165746, 'val_f1': 0.882768865255759, 'time': 189.74754285812378, 'ce': 1.1344795339578724, 'kl': 0.2402608415721792, 'feat': 0.015775084143894613}
+ep7 it0/678 loss=1.246 ce=1.018 kl=0.222 feat=0.012 132 img/s
+ep7 it100/678 loss=1.581 ce=1.200 kl=0.371 feat=0.019 240 img/s
+ep7 it200/678 loss=1.380 ce=1.187 kl=0.187 feat=0.013 241 img/s
+ep7 it300/678 loss=1.404 ce=1.122 kl=0.275 feat=0.015 241 img/s
+ep7 it400/678 loss=1.569 ce=1.249 kl=0.311 feat=0.017 241 img/s
+ep7 it500/678 loss=1.310 ce=1.083 kl=0.220 feat=0.013 242 img/s
+ep7 it600/678 loss=1.179 ce=0.960 kl=0.213 feat=0.013 241 img/s
+[epoch] {'epoch': 7, 'val_acc': 0.9449355432780847, 'val_f1': 0.9064694927823993, 'time': 190.07236099243164, 'ce': 1.0723381830176069, 'kl': 0.22926920212827248, 'feat': 0.013811769738661505}
+ep8 it0/678 loss=1.157 ce=0.998 kl=0.154 feat=0.011 138 img/s
+ep8 it100/678 loss=1.197 ce=0.989 kl=0.203 feat=0.010 240 img/s
+ep8 it200/678 loss=1.268 ce=1.036 kl=0.227 feat=0.012 241 img/s
+ep8 it300/678 loss=1.304 ce=1.116 kl=0.181 feat=0.012 241 img/s
+ep8 it400/678 loss=1.376 ce=1.120 kl=0.250 feat=0.012 241 img/s
+ep8 it500/678 loss=1.059 ce=0.910 kl=0.144 feat=0.011 241 img/s
+ep8 it600/678 loss=1.177 ce=1.010 kl=0.161 feat=0.011 241 img/s
+[epoch] {'epoch': 8, 'val_acc': 0.9605893186003683, 'val_f1': 0.9365961199675938, 'time': 189.74191641807556, 'ce': 1.019583823054941, 'kl': 0.21570897735325636, 'feat': 0.012265694879852565}
+ep9 it0/678 loss=0.997 ce=0.862 kl=0.130 feat=0.010 144 img/s
+ep9 it100/678 loss=1.196 ce=0.984 kl=0.206 feat=0.011 240 img/s
+ep9 it200/678 loss=0.910 ce=0.823 kl=0.083 feat=0.009 241 img/s
+ep9 it300/678 loss=1.075 ce=0.925 kl=0.145 feat=0.011 242 img/s
+ep9 it400/678 loss=1.131 ce=0.965 kl=0.162 feat=0.010 241 img/s
+ep9 it500/678 loss=1.156 ce=0.988 kl=0.164 feat=0.009 241 img/s
+ep9 it600/678 loss=1.357 ce=1.120 kl=0.230 feat=0.014 242 img/s
+[epoch] {'epoch': 9, 'val_acc': 0.9657458563535911, 'val_f1': 0.9525883358488205, 'time': 189.35937452316284, 'ce': 0.9706480313191371, 'kl': 0.2026186692679526, 'feat': 0.011293452749561771}
+ep10 it0/678 loss=1.299 ce=1.017 kl=0.274 feat=0.017 130 img/s
+ep10 it100/678 loss=1.219 ce=0.960 kl=0.255 feat=0.009 241 img/s
+ep10 it200/678 loss=1.270 ce=0.957 kl=0.307 feat=0.012 241 img/s
+ep10 it300/678 loss=1.158 ce=0.943 kl=0.210 feat=0.010 242 img/s
+ep10 it400/678 loss=1.097 ce=0.932 kl=0.159 feat=0.011 241 img/s
+ep10 it500/678 loss=1.172 ce=0.947 kl=0.217 feat=0.015 242 img/s
+ep10 it600/678 loss=1.476 ce=1.129 kl=0.340 feat=0.013 242 img/s
+[epoch] {'epoch': 10, 'val_acc': 0.9705340699815838, 'val_f1': 0.9612082545916522, 'time': 189.55800223350525, 'ce': 0.9381771481494284, 'kl': 0.19162871774318999, 'feat': 0.010669175854123096}
+ep11 it0/678 loss=1.151 ce=0.922 kl=0.222 feat=0.013 139 img/s
+ep11 it100/678 loss=1.200 ce=0.964 kl=0.231 feat=0.011 240 img/s
+ep11 it200/678 loss=1.177 ce=0.992 kl=0.181 feat=0.009 241 img/s
+ep11 it300/678 loss=1.067 ce=0.897 kl=0.165 feat=0.009 241 img/s
+ep11 it400/678 loss=1.212 ce=0.993 kl=0.213 feat=0.011 241 img/s
+ep11 it500/678 loss=1.231 ce=0.921 kl=0.303 feat=0.014 241 img/s
+ep11 it600/678 loss=1.001 ce=0.897 kl=0.101 feat=0.006 241 img/s
+[epoch] {'epoch': 11, 'val_acc': 0.9721915285451197, 'val_f1': 0.9605118471615618, 'time': 189.85969471931458, 'ce': 0.9144903762502304, 'kl': 0.1802853609608338, 'feat': 0.009785247763349596}
+ep12 it0/678 loss=0.992 ce=0.817 kl=0.170 feat=0.011 142 img/s
+ep12 it100/678 loss=0.990 ce=0.826 kl=0.159 feat=0.010 241 img/s
+ep12 it200/678 loss=0.832 ce=0.772 kl=0.056 feat=0.006 241 img/s
+ep12 it300/678 loss=1.132 ce=0.847 kl=0.279 feat=0.013 241 img/s
+ep12 it400/678 loss=1.126 ce=0.907 kl=0.214 feat=0.010 242 img/s
+ep12 it500/678 loss=1.239 ce=0.989 kl=0.246 feat=0.009 241 img/s
+ep12 it600/678 loss=1.237 ce=1.037 kl=0.197 feat=0.008 242 img/s
+[epoch] {'epoch': 12, 'val_acc': 0.9756906077348066, 'val_f1': 0.96348003447867, 'time': 189.69741773605347, 'ce': 0.8826961911181784, 'kl': 0.166777990560616, 'feat': 0.009412173324629972}
+ep13 it0/678 loss=1.147 ce=0.923 kl=0.219 feat=0.008 137 img/s
+ep13 it100/678 loss=0.959 ce=0.846 kl=0.109 feat=0.009 239 img/s
+ep13 it200/678 loss=0.948 ce=0.835 kl=0.110 feat=0.006 241 img/s
+ep13 it300/678 loss=1.028 ce=0.829 kl=0.194 feat=0.010 241 img/s
+ep13 it400/678 loss=1.141 ce=0.936 kl=0.199 feat=0.011 242 img/s
+ep13 it500/678 loss=1.080 ce=0.879 kl=0.195 feat=0.011 242 img/s
+ep13 it600/678 loss=1.005 ce=0.869 kl=0.132 feat=0.007 241 img/s
+[epoch] {'epoch': 13, 'val_acc': 0.978268876611418, 'val_f1': 0.9676959843691036, 'time': 189.96802639961243, 'ce': 0.8730405734351955, 'kl': 0.16489924653089855, 'feat': 0.009314682631366021}
+ep14 it0/678 loss=1.042 ce=0.903 kl=0.135 feat=0.009 142 img/s
+ep14 it100/678 loss=1.041 ce=0.883 kl=0.152 feat=0.010 240 img/s
+ep14 it200/678 loss=0.948 ce=0.855 kl=0.090 feat=0.007 241 img/s
+ep14 it300/678 loss=0.967 ce=0.837 kl=0.127 feat=0.006 241 img/s
+ep14 it400/678 loss=0.970 ce=0.843 kl=0.124 feat=0.007 241 img/s
+ep14 it500/678 loss=0.971 ce=0.849 kl=0.117 feat=0.008 241 img/s
+ep14 it600/678 loss=1.248 ce=0.940 kl=0.302 feat=0.011 241 img/s
+[epoch] {'epoch': 14, 'val_acc': 0.9775322283609577, 'val_f1': 0.9682207318294853, 'time': 190.07548642158508, 'ce': 0.8632375891581398, 'kl': 0.15602944523183998, 'feat': 0.009314186101817803}
+{
+  "arch": "mamba",
+  "scan": "ours",
+  "bit": true,
+  "name": "ours_nosal",
+  "params_M": 1.553326,
+  "pv_test": {
+    "acc": 0.9732915822435071,
+    "f1": 0.9608779608684561
+  },
+  "pv_test_bgswap": {
+    "acc": 0.935899797384417,
+    "f1": 0.9052885831040957
+  },
+  "bg_reliance_drop": 0.037391784859090116,
+  "plantdoc_zeroshot": {
+    "acc": 0.11833855799373041,
+    "f1": 0.08562226673739465
+  },
+  "robust": {
+    "noise0": 0.9668447227850433,
+    "noise1": 0.8929821329895008,
+    "blur0": 0.9712654264137042,
+    "blur1": 0.9580033155277214,
+    "dark0": 0.9686866826303187,
+    "dark1": 0.8520906244243875,
+    "bright0": 0.9574507275741388,
+    "bright1": 0.8316448701418309
+  },
+  "throughput_img_s": 968.8639777705645
+}
